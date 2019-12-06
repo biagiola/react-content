@@ -3,21 +3,16 @@ import { render } from 'react-dom';
 import './style.css';
 import Navbar from './components/Navbar';
 import BookList from './components/Booklist';
+import ThemeContextProvider from './contexts/ThemeContext';
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      name: 'React'
-    };
-  }
-
   render() {
     return (
       <div classNane="App">
+      <ThemeContextProvider>
         <Navbar/>
         <BookList/>
-        <p>hola</p>
+      </ThemeContextProvider>
       </div>
     );
   }
