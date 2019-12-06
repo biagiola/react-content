@@ -3,11 +3,10 @@ import React, { Component, createContext } from 'react';
 export const ThemeContext = createContext();
 
 class ThemeContextProvider extends Component {
-  
   state = {
     isLightTheme: true,
-    light: { synthax: '#555', ui: '#ddd', bg: '#eee' },
-    dark: { synthax: '#ddd', ui: '#333', bg: '#555' }
+    light: { syntax: '#555', ui: '#ddd', bg: '#eee' },
+    dark: { syntax: '#ddd', ui: '#333', bg: '#555' }
   }
   render(){
     return(
