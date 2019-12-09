@@ -1,18 +1,28 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import './style.css';
-import Navbar from './components/Navbar02';
+import Navbar from './components/Navbar';
 import BookList from './components/Booklist';
 import ThemeContextProvider from './contexts/ThemeContext';
+import ThemeToggle from './components/ThemeToggle';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      name: 'React'
+    };
+  }
+
   render() {
     return (
-      <div classNane="App">
-      <ThemeContextProvider>
-        <Navbar/>
-        <BookList/>
-      </ThemeContextProvider>
+      <div className="App">
+        <ThemeContextProvider>
+          <Navbar />
+          <BookList />
+          <ThemeToggle />
+        </ThemeContextProvider>
+
       </div>
     );
   }
